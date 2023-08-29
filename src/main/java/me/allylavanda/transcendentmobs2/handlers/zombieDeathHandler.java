@@ -14,7 +14,7 @@ public class zombieDeathHandler {
         Player p = e.getEntity().getKiller();
 
         assert p != null;
-        kc.addKillZombie(p);
+        kc.addKillZombie(p, 1);
         p.sendMessage("ZDH DEBUG");
         // Class defined Zombie spawn condition
 

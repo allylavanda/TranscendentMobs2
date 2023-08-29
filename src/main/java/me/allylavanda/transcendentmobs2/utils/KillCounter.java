@@ -11,10 +11,10 @@ public class KillCounter {
     FileConfiguration cfg = main.getConfig();
 
     // Adds kill to player's Zombie kill count
-    public void addKillZombie(Player p) {
+    public void addKillZombie(Player p, int addkill) {
         int count = cfg.getInt(p.getName() + "." + "zombie kills");
         p.sendMessage("DEBUG: Zombie killed");
-        cfg.set(p.getName() + "." + "zombie kills", count++);
+        cfg.set(p.getName() + "." + "zombie kills", count + addkill);
         main.saveConfig();
     }
 
@@ -30,9 +30,9 @@ public class KillCounter {
     }
 
     // Adds kill to player's Skeleton kill count
-    public void addKillSkeleton(Player p) {
+    public void addKillSkeleton(Player p, int addkill) {
         int count = cfg.getInt(p.getName() + "." + "skeleton kills");
-        cfg.set(p.getName() + "." + "skeleton kills", count++);
+        cfg.set(p.getName() + "." + "skeleton kills", count + addkill);
         main.saveConfig();
     }
 
@@ -48,9 +48,9 @@ public class KillCounter {
     }
 
     // Adds kill to player's Spider kill count
-    public void addKillSpider(Player p) {
+    public void addKillSpider(Player p, int addkill) {
         int count = cfg.getInt(p.getName() + "." + "spider kills");
-        cfg.set(p.getName() + "." + "spider kills", count++);
+        cfg.set(p.getName() + "." + "spider kills", count + addkill);
         main.saveConfig();
     }
 
@@ -66,9 +66,9 @@ public class KillCounter {
     }
 
     // Adds kill to player's Creeper kill count
-    public void addKillCreeper(Player p) {
+    public void addKillCreeper(Player p, int addkill) {
         int count = cfg.getInt(p.getName() + "." + "creeper kills");
-        cfg.set(p.getName() + "." + "creeper kills", count++);
+        cfg.set(p.getName() + "." + "creeper kills", count + addkill);
         main.saveConfig();
     }
 

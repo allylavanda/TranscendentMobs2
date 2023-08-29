@@ -14,7 +14,7 @@ public class spiderDeathHandler {
         Player p = e.getEntity().getKiller();
 
         assert p != null;
-        kc.addKillSpider(p);
+        kc.addKillSpider(p, 1);
         // Class defined Spider spawn condition
 
         if (kc.getKillsSpider(p) >= 10) {
