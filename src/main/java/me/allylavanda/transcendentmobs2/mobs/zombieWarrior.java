@@ -18,7 +18,6 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
 public class zombieWarrior {
     KillCounter kc = new KillCounter();
