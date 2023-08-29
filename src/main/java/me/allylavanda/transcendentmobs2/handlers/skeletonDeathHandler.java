@@ -13,7 +13,8 @@ public class skeletonDeathHandler {
         Entity entity = e.getEntity();
         Player p = e.getEntity().getKiller();
 
-        kc.addKillSkeleton(p,1);
+        assert p != null;
+        kc.addKillSkeleton(p);
         // Class defined Skeleton spawn condition
 
         if (kc.getKillsSkeleton(p) >= 10) {

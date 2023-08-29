@@ -13,7 +13,8 @@ public class creeperDeathHandler {
         Entity entity = e.getEntity();
         Player p = e.getEntity().getKiller();
 
-        kc.addKillCreeper(p,1);
+        assert p != null;
+        kc.addKillCreeper(p);
         // Class defined Creeper spawn condition
 
         if (kc.getKillsCreeper(p) >= 10) {

@@ -3,7 +3,6 @@ package me.allylavanda.transcendentmobs2.handlers;
 import me.allylavanda.transcendentmobs2.mobs.zombieWarrior;
 import me.allylavanda.transcendentmobs2.utils.KillCounter;
 import org.bukkit.World;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDeathEvent;
 
@@ -12,10 +11,11 @@ public class zombieDeathHandler {
     zombieWarrior zw = new zombieWarrior();
 
     public void deathHandler(EntityDeathEvent e) {
-        Entity entity = e.getEntity();
         Player p = e.getEntity().getKiller();
 
-        kc.addKillZombie(p,1);
+        assert p != null;
+        kc.addKillZombie(p);
+        p.sendMessage("ZDH DEBUG");
         // Class defined Zombie spawn condition
 
         if (kc.getKillsZombie(p) >= 10) {
