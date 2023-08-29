@@ -16,6 +16,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Objects;
+
 public class zombieWarrior {
     KillCounter kc = new KillCounter();
     BossBar b = Bukkit.createBossBar("Zombie Warrior", BarColor.PINK, BarStyle.SOLID, BarFlag.DARKEN_SKY);
@@ -31,7 +33,7 @@ public class zombieWarrior {
         zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(100);
         zombie.setHealth(100);
         // Zombie Warrior Gear
-        zombie.getEquipment().setItemInMainHand(new ItemStack(konstanzasRapier.konstanzasRapier));
+        zombie.getEquipment().setItemInMainHand(konstanzasRapier.konstanzasRapier);
         zombie.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
         zombie.getEquipment().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
         zombie.getEquipment().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
