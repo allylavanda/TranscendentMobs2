@@ -1,6 +1,7 @@
 package me.allylavanda.transcendentmobs2.mobs;
 
 import me.allylavanda.transcendentmobs2.utils.KillCounter;
+import me.allylavanda.transcendentmobs2.weapons.konstanzasRapier;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -22,7 +23,7 @@ public class zombieWarrior {
         zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(100);
         zombie.setHealth(100);
         // Zombie Warrior Gear
-        zombie.getEquipment().setItemInMainHand(new ItemStack(Material.DIAMOND_AXE));
+        zombie.getEquipment().setItemInMainHand(new ItemStack(konstanzasRapier.konstanzasRapier));
         zombie.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
         zombie.getEquipment().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
         zombie.getEquipment().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
