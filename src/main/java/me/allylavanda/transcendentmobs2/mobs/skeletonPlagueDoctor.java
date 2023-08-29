@@ -2,7 +2,7 @@ package me.allylavanda.transcendentmobs2.mobs;
 
 import me.allylavanda.transcendentmobs2.Main;
 import me.allylavanda.transcendentmobs2.utils.KillCounter;
-import me.allylavanda.transcendentmobs2.weapons.konstanzasRapier;
+import me.allylavanda.transcendentmobs2.armor.plagueHelmet;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -14,11 +14,11 @@ import org.bukkit.boss.BossBar;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Skeleton;
-import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
-import org.checkerframework.checker.units.qual.K;
 
 import java.util.Objects;
+
+
 
 public class skeletonPlagueDoctor {
 
@@ -39,11 +39,11 @@ public class skeletonPlagueDoctor {
         skeleton.setHealth(100);
         // Skeleton Warrior Gear
         Objects.requireNonNull(skeleton.getEquipment()).setItemInMainHand(new ItemStack(Material.BOW));
-        skeleton.getEquipment().setHelmet(new ItemStack(Material.LEATHER_HELMET));
+        skeleton.getEquipment().setHelmet(plagueHelmet.plagueHelmet);
         skeleton.getEquipment().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
         skeleton.getEquipment().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
         skeleton.getEquipment().setBoots(new ItemStack(Material.LEATHER_BOOTS));
-        skeleton.getEquipment().setItemInMainHandDropChance(40);
+        skeleton.getEquipment().setHelmetDropChance(100);
         kc.resetKillsSkeleton(p);
 
         Bukkit.getScheduler().runTaskAsynchronously(Main.getPlugin(), new Runnable() {
