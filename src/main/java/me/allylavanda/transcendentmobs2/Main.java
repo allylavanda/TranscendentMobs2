@@ -16,13 +16,13 @@ public final class Main extends JavaPlugin {
         // Plugin startup logic
         config=getConfig();
         plugin=this;
-        this.saveDefaultConfig();
-        System.out.println("[TranscendentMobs2] TranscendentMobs2 by allylavanda has been loaded!");
-        System.out.println("[TranscendentMobs2] Plugin Version 1.0");
         initWeps.init();
-
+        this.saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new EventListener(), this);
         config.set("debug", true);
+
+        System.out.println("[TranscendentMobs2] TranscendentMobs2 by allylavanda has been loaded!");
+        System.out.println("[TranscendentMobs2] Plugin Version 1.0");
     }
 
     @Override
