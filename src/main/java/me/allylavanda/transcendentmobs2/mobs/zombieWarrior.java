@@ -18,6 +18,7 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 public class zombieWarrior {
     KillCounter kc = new KillCounter();
@@ -48,6 +49,11 @@ public class zombieWarrior {
             public void run() {
                 while (zombie.getHealth() != 0) {
                     b.setProgress(zombie.getHealth()/ 100);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        Thread.currentThread().interrupt();
+                    }
                 }
                 b.removeAll();
             }
