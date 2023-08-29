@@ -30,10 +30,10 @@ public class zombieWarrior {
         zombie.setCustomName("Zombie Warrior");
         zombie.setCustomNameVisible(true);
         // Attributes
-        zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(100);
+        Objects.requireNonNull(zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(100);
         zombie.setHealth(100);
         // Zombie Warrior Gear
-        zombie.getEquipment().setItemInMainHand(konstanzasRapier.konstanzasRapier);
+        Objects.requireNonNull(zombie.getEquipment()).setItemInMainHand(konstanzasRapier.konstanzasRapier);
         zombie.getEquipment().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
         zombie.getEquipment().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
         zombie.getEquipment().setLeggings(new ItemStack(Material.IRON_LEGGINGS));

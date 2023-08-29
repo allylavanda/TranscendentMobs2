@@ -14,7 +14,12 @@ import java.util.UUID;
 
 public class konstanzasRapier {
     public static ItemStack konstanzasRapier;
-    public void createWeapon() {
+
+    public void init() {
+        createWeapon();
+    }
+
+    private void createWeapon() {
         ItemStack item = new ItemStack(Material.DIAMOND_SWORD);
         // Attributes
         AttributeModifier damageModifier = new AttributeModifier(UUID.randomUUID(), "generic.attackDamage",
