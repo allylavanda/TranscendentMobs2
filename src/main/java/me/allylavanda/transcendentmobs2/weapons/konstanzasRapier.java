@@ -29,6 +29,7 @@ public class konstanzasRapier {
 
         ItemMeta meta = item.getItemMeta();
         // Lore
+        assert meta != null;
         meta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Konstanza's Rapier");
         List<String> lore = new ArrayList<>();
         lore.add(ChatColor.AQUA + "" + ChatColor.ITALIC + "Transcendent");
