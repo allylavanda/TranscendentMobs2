@@ -51,6 +51,7 @@ public class zombieWarrior {
                 while (zombie.getHealth() != 0) {
                     b.setProgress(zombie.getHealth()/ 100);
                 }
+                b.removeAll();
             }
         });
     }
