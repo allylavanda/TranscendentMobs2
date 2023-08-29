@@ -1,0 +1,4 @@
+name: TranscendentMobs2
+version: '${version}'
+main: me.allylavanda.transcendentmobs2.Main
+api-version: '1.20'
