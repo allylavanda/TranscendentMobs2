@@ -42,7 +42,6 @@ public class zombieWarrior {
         zombie.getEquipment().setItemInMainHandDropChance(100);
         kc.resetKillsZombie(p);
 
-
         Bukkit.getScheduler().runTaskAsynchronously(Main.getPlugin(), new Runnable() {
             @Override
             public void run() {

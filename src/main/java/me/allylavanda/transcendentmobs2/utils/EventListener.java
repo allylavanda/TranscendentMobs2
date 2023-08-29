@@ -1,6 +1,7 @@
 package me.allylavanda.transcendentmobs2.utils;
 
 import me.allylavanda.transcendentmobs2.Main;
+import me.allylavanda.transcendentmobs2.handlers.skeletonDeathHandler;
 import me.allylavanda.transcendentmobs2.handlers.zombieDeathHandler;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -13,6 +14,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class EventListener implements Listener {
     zombieDeathHandler zdh = new zombieDeathHandler();
+    skeletonDeathHandler sdh = new skeletonDeathHandler();
     private final Main main = Main.getPlugin(Main.class);
     FileConfiguration cfg = main.getConfig();
 
@@ -30,6 +32,14 @@ public class EventListener implements Listener {
         if (e.getEntity().getKiller() != null) {
             if (e.getEntity() instanceof Zombie)
                 zdh.deathHandler(e);
+        }
+    }
+
+    @EventHandler
+    public void entityDeathSkeleton(EntityDeathEvent e) {
+        if (e.getEntity().getKiller() != null) {
+            if (e.getEntity() instanceof Skeleton)
+                sdh.deathHandler(e);
         }
     }
 }

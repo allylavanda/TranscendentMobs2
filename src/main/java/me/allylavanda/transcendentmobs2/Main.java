@@ -1,5 +1,6 @@
 package me.allylavanda.transcendentmobs2;
 
+import me.allylavanda.transcendentmobs2.armor.initArmor;
 import me.allylavanda.transcendentmobs2.weapons.initWeps;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -10,6 +11,7 @@ public final class Main extends JavaPlugin {
     private static Main plugin;
     public static FileConfiguration config;
     private final initWeps initWeps = new initWeps();
+    private final initArmor initArmor = new initArmor();
 
     @Override
     public void onEnable() {
@@ -17,6 +19,7 @@ public final class Main extends JavaPlugin {
         config=getConfig();
         plugin=this;
         initWeps.init();
+        initArmor.init();
         this.saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new EventListener(), this);
         config.set("debug", true);

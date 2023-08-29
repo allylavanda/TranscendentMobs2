@@ -15,7 +15,7 @@ public class zombieDeathHandler {
 
         assert p != null;
         kc.addKillZombie(p, 1);
-        p.sendMessage("ZDH DEBUG");
+        // p.sendMessage("ZDH DEBUG");
         // Class defined Zombie spawn condition
 
         if (kc.getKillsZombie(p) >= 10) {
@@ -25,7 +25,5 @@ public class zombieDeathHandler {
             // Spawn Zombie Warrior Near Player
             zw.spawnZombieWarrior(p, world);
         }
-
-
     }
 }
